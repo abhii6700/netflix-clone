@@ -5,10 +5,11 @@ import requests from "../../../../Requests";
 
 function Banner() {
     const [movie, setMovie] = useState([]);
+    
 
     useEffect(() => {
         async function fetchData() {
-            const request = await axios.get(requests.fetchTrending);
+            const request = await axios.get(requests.fetchRomanceMovies);
             setMovie(
                 request.data.results[
                 Math.floor(Math.random() * request.data.results.length - 1)
