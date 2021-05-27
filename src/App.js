@@ -34,14 +34,15 @@ function App() {
 
   return (
     <div className="app">
-     <Switch> {!user ? <Route path='/login' component={Login}/> : 
-     <>
+      {!user ? <Login/> : 
+        <Switch>
         <Route exact path='/' component={HomePage} />
-        <Route path='/profile' component={Profile} />
-      </>
-    }
-    </Switch>
+        <Route path='/profile' component={Profile}/>
+        </Switch>
+      }
       
+      
+    
     </div>
   );
 }

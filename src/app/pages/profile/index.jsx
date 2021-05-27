@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { selectUser } from '../../../features/userSlice'
+import { auth } from '../../../firebase'
 import NavBar from '../../components/navbar'
 import './Profile.scss'
 
@@ -23,7 +24,7 @@ const Profile = () => {
                         <h2>{user.email}</h2>
                         <div className="profile-plans">
                             <h3>Plans</h3>
-                            <button className='signout-button'>Sign Out</button>
+                            <button onClick={() => auth.signOut()} className='signout-button'>Sign Out</button>
                         </div>
                     </div>
                 </div>
