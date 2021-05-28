@@ -14,7 +14,7 @@ const Profile = () => {
         <div className='profile container'>
             <NavBar />
             <div className="profile-content-wrapper">
-                <h1>Edit Profile</h1>
+                <h1>My Profile</h1>
                 <div className="profile-info">
                     <div className="profile-icon">
                         <img
@@ -38,14 +38,14 @@ const Profile = () => {
                                     <h4>Standard </h4>
                                     <h5>1080P</h5>
                                 </div>
-                                <button>Subscribe</button>
+                                <button className='subscribe'>Subscribe</button>
                             </div>
                             <div className='plan'>
                                 <div className='plan-info'>
                                     <h4>Basic </h4>
                                     <h5>720P</h5>
                                 </div>
-                                <button>Subscribe</button>
+                                <button className='subscribe'>Subscribe</button>
                             </div>
                             <button onClick={() => {
                                 auth.signOut()
