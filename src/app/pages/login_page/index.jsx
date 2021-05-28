@@ -8,7 +8,7 @@ const Login = () => {
         <div className='login container'>
             <div className="login-background">
                 <div className="login-logo">
-                    <img src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png" alt="" />
+                    <img src="https://www.freepnglogos.com/uploads/netflix-logo-0.png" alt="" />
                 </div>
                 <button onClick={() => setSignIn(true)} className='sign-in-button'>Sign In</button>
                 <div className="login-gradient" />

@@ -16,3 +16,4 @@ const firebaseConfig = {
 
   export {auth}
   export default db;
+  export {firebaseApp}

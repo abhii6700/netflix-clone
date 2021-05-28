@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import { useHistory } from 'react-router'
 import { selectUser } from '../../../features/userSlice'
 import { auth } from '../../../firebase'
 import NavBar from '../../components/navbar'
@@ -7,6 +8,7 @@ import './Profile.scss'
 
 const Profile = () => {
     const user = useSelector(selectUser)
+    const history = useHistory()
 
     return (
         <div className='profile container'>
@@ -24,7 +26,31 @@ const Profile = () => {
                         <h2>{user.email}</h2>
                         <div className="profile-plans">
                             <h3>Plans</h3>
-                            <button onClick={() => auth.signOut()} className='signout-button'>Sign Out</button>
+                            <div className='plan'>
+                                <div className='plan-info'>
+                                    <h4>Premium </h4>
+                                    <h5>4K HDR</h5>
+                                </div>
+                                <button className='subscribed'>Subscribed</button>
+                            </div>
+                            <div className='plan'>
+                                <div className='plan-info'>
+                                    <h4>Standard </h4>
+                                    <h5>1080P</h5>
+                                </div>
+                                <button>Subscribe</button>
+                            </div>
+                            <div className='plan'>
+                                <div className='plan-info'>
+                                    <h4>Basic </h4>
+                                    <h5>720P</h5>
+                                </div>
+                                <button>Subscribe</button>
+                            </div>
+                            <button onClick={() => {
+                                auth.signOut()
+                                history.push('/')
+                            }} className='signout-button'>Sign Out</button>
                         </div>
                     </div>
                 </div>
