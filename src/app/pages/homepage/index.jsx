@@ -9,7 +9,7 @@ const HomePage = () => {
         <NavBar />
         <Banner />
         <Row
-            title='NETFLIX ORIGINALS'
+            title='MOST POPULAR'
             fetchURL={requests.fetchRomanceMovies}
             isLargeRow
         />
