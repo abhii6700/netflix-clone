@@ -28,7 +28,7 @@ function Row({ title, fetchURL, isLargeRow = false }) {
                 <h2>{title}</h2>
                 <div className='row-posters'>
                     {/* Several row posters */}
-                    {movies && movies.map((movie) => ((isLargeRow && movie.poster_path) || (!isLargeRow && movie.backdrop_path)) && (
+                    {movies && movies.sort().reverse().map((movie) => ((isLargeRow && movie.poster_path) || (!isLargeRow && movie.backdrop_path)) && (
 
                         <img
                             key={movie.id}
