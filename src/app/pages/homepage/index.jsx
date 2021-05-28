@@ -10,7 +10,7 @@ const HomePage = () => {
         <Banner />
         <Row
             title='NETFLIX ORIGINALS'
-            fetchURL={requests.fetchNetflixOriginals}
+            fetchURL={requests.fetchRomanceMovies}
             isLargeRow
         />
         <Row title='Trending Now' fetchURL={requests.fetchTrending} />

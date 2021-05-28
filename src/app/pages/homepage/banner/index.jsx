@@ -12,7 +12,7 @@ function Banner() {
             const request = await axios.get(requests.fetchHorrorMovies);
             setMovie(
                 request.data.results[
-                Math.floor(Math.random() * request.data.results.length - 2)
+                Math.floor(Math.random() * request.data.results.length - 1)
                 ]
             );
             return request;
